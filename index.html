@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="shorcut icon" href="./images/alien-153542__340.jpg">
-    <link rel="stylesheet" href="style.css">
-    <title>Projet 2 Ubix-group</title>
-</head>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="shorcut icon" href="./images/alien-153542__340.jpg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" media="screen and (min-width:768px) and (max-width: 1024px)"href="tablette.css">
+        <link rel="stylesheet" media="screen and (max-width: 767px)" href="mobile.css">
+        <title>Site Booki</title>
+    </head>
     <body id="accueil">
-        <section id="header">
+        <!-- En-tête du site avec la navbar -->
+        <div id="header">
             <img src="images/logo/Booki.png" alt="logo de la page">
-                <ul id="navbar">
-                    <li><a href="#marseile-hebergements">Hébergement</a></li>
-                    <li class="act"><a href="#marseille-activities">Activités</a></li>
-                </ul>     
-        </section>
+            <ul id="navbar">
+                <li><a href="#marseile-hebergements">Hébergement</a></li>
+                <li class="act"><a href="#marseille-activities">Activités</a></li>
+            </ul>     
+        </div>
+
         <div class="content">
             <div class="container">
                 <div class="ras">
                     <p><strong>Trouvez votre hébergement pour passer les vacances</strong></p>
                     <p class="p2">En plein centre ville ou en pleine nature</p>
                 </div>
-                
-                <section class="form">
+
+                <div class="form">
                     <i class="fa-solid fa-location-dot posi"></i>
-                    <input id="input" type="text" placeholder="Marseille, France">
+                    <div class="form-container">
+                        <input id="input" type="text" placeholder="Marseille, France">
+                        <button class="search2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
                     <button id="search1">Rechercher</button>
-                    <button class="search2"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </section>
-            
+                </div>
+
                 <div class="ras2">
                     <p class="fil"><strong>Filtres</strong></p>
                     <div class="row">
@@ -52,22 +58,21 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col2">
                     <i class="fa-solid fa-info"></i>
                     <p>Plus de 500 logements sont disponibles dans cette ville</p>
                 </div>
-    
-                <section id="marseille-hebergements">
-    
-                    <!-- zone hébergement à Marseille -->
-                    <section id="left-part">
+
+                <!-- zone hébergement à Marseille -->
+                <div id="marseille-hebergements">
+                    <div id="left-part">
                         <h3>Hébergements à Marseille</h3>
-                        <section id="content-box">
-                            <div id="bloc">
+                        <div id="content-box">
+                            <div class="bloc">
                                 <img src="./images/hebergements/im/auberge.jpg" alt="">
-                                <span id="aub">Auberge de la Canebière</span>
-                                <span>Nuit à partir de 25€</span>
+                                <span class="aub">Auberge de la Canebière</span>
+                                <span class="prix">Nuit à partir 25€</span>
                                 <div>
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
@@ -76,10 +81,10 @@
                                     <svg role="img" class="grey-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
                                 </div>
                             </div>
-                            <div id="bloc">
+                            <div class="bloc">
                                 <img src="./images/hebergements/im/hotelparc.jpg" alt="">
-                                <span id="aub">Hôtel du sport</span>
-                                <span>Nuit à partir de 52€</span>
+                                <span class="aub">Hôtel du sport</span>
+                                <span class="prix">Nuit à partir de <span class="euro">52€</span></span>
                                 <div>
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
@@ -88,9 +93,9 @@
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
                                 </div>
                             </div>
-                            <div id="bloc">
+                            <div class="bloc">
                                 <img src="./images/hebergements/im/hotelmouete.jpg" alt="">
-                                <span id="aub">Hôtel les mouettes</span>
+                                <span class="aub">Hôtel les mouettes</span>
                                 <span>Nuit à partir de 76€</span>
                                 <div>
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
@@ -100,9 +105,9 @@
                                     <svg role="img" class="grey-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
                                 </div>
                             </div>
-                            <div id="bloc">
+                            <div class="bloc">
                                 <img src="./images/hebergements/im/hotelmer.jpg" alt="">
-                                <span id="aub">Hôtel de la mer</span>
+                                <span class="aub">Hôtel de la mer</span>
                                 <span>Nuit à partir de 46€</span>
                                 <div>
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
@@ -112,9 +117,9 @@
                                     <svg role="img" class="grey-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
                                 </div>
                             </div>
-                            <div id="bloc">
+                            <div class="bloc">
                                 <img src="./images/hebergements/im/aubergeparrier.jpg" alt="">
-                                <span id="aub">Auberge le panier</span>
+                                <span class="aub">Auberge le panier</span>
                                 <span>Nuit à partir de 23€</span>
                                 <div>
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
@@ -124,9 +129,9 @@
                                     <svg role="img" class="grey-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
                                 </div>
                             </div>
-                            <div id="bloc">
+                            <div class="bloc">
                                 <img src="./images/hebergements/im/hotelamina.jpg" alt="">
-                                <span id="aub">Hôtel chez Amina</span>
+                                <span class="aub">Hôtel chez Amina</span>
                                 <span>Nuit à partir de 96€</span>
                                 <div>
                                     <svg role="img" class="blue-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
@@ -137,18 +142,19 @@
                                 </div>
                             </div>
                             <a href="#"><h4>Afficher plus</h4></a>
-                        </section>
-                    </section>
-                     <!-- Zone hébergements populaires    -->
+                        </div>
+                    </div>
+
+                    <!-- Zone hébergements populaires    -->
                     <aside id="right-part">
                         <h3>Les plus populaires</h3>
                         <i class="fa-solid fa-arrow-trend-up right-icon"></i>
-                        <section id="content-box2">
-                            <div id="bloc2">
+                        <div id="content-box2">
+                            <div class="bloc2">
                                 <img src="./images/hebergements/im/hotelsoleil.jpg" alt="">
                                 <div>
-                                    <span id="aub"><strong>Hôtel le soleil du matin</strong></span>
-                                    <span id="heb1">Nuit à partir de 128€</span>
+                                    <span class="aub"><strong>Hôtel le soleil du matin</strong></span>
+                                    <span class="heb1">Nuit à partir de 128€</span>
                                     <div>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -158,11 +164,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="bloc2">
+                            <div class="bloc2">
                                 <img src="./images/hebergements/im/coeur.jpg" alt="">
                                 <div>
-                                    <span id="aub"><strong>Au coeur de l'eau des chambres d'hôtes</strong></span>
-                                    <span id="heb1">Nuit à partir de 171€</span>
+                                    <span class="aub"><strong>Au coeur de l'eau des chambres d'hôtes</strong></span>
+                                    <span class="heb1">Nuit à partir de 171€</span>
                                     <div>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -172,11 +178,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="bloc2">
+                            <div class="bloc2">
                                 <img src="./images/hebergements/im/hotelbleu.jpg" alt="">
                                 <div>
-                                    <span id="aub"><strong>Hôtel tout bleu tout blanc</strong></span>
-                                    <span id="heb1">Nuit à partir de 68€</span>
+                                    <span class="aub"><strong>Hôtel tout bleu tout blanc</strong></span>
+                                    <span class="heb1">Nuit à partir de 68€</span>
                                     <div>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -186,68 +192,69 @@
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
                     </aside>
-                </section>
+                </div>
             </div>
+
             <section id="marseille-activities">
                 <h3>Activités à Marseille</h3>
-    
-                <section id="content-activities">
-                    <a href="#" class="flex" id="flex1">
+                <div id="content-activities">
+                    <a href="#" class="flex" id="flex1"> 
                         <img src="./images/activites/im/port.jpg" alt="">
                         <p>Vieux Port</p>
                     </a>
                     <div class="flex">
-                        <a href="#">
+                        <a href="#" id="flex2">
                             <img src="./images/activites/im/montagne.jpg" alt="">
                             <p>Port de Promegues</p>
                         </a>
-                        <a href="#" id="flex1">
+                        <a href="#" id="flex3">
                             <img src="./images/activites/im/plagz.jpg" alt="">
                             <p>Iles de Frioul</p>
                         </a>
                     </div>
-                    <a class="flex" id="flex2">
+                    <a class="flex" id="flex4">
                         <img src="./images/activites/im/eau.jpg" alt="">
                         <p>Parc National des Calangues</p>
                     </a>
                     <div class="flex">
-                        <a href="#" id="flex1">
+                        <a href="#" id="flex5">
                             <img src="./images/activites/im/notredame.jpg" alt="">
                             <p>Notre Dame-de-la-garde</p>
                         </a>
-                        <a href="#" id="flex1">
+                        <a href="#" id="flex6">
                             <img src="./images/activites/im/chateau.jpg" alt="">
                             <p>Parc Longchamp</p>
                         </a>
                     </div>
-                </section>
+                </div>
             </section> 
         </div>
+        
         <footer>
-            <ul id="child1">
+            <div id="child1" class="foot">
                 <h4>A propos</h4>
                 <div>
                     <a href="#">Fonctionnement du site</a>
                     <a href="#">Conditions générales de vente</a>
                     <a href="#">Données et confidentialité</a>
                 </div>
-            </ul>
-            <ul id="child2">
+            </div>
+            <div id="child2" class="foot">
                 <h4>Nos hébergements</h4>
                 <div>
                     <a href="#">Charte qualité</a>
                     <a href="#">Soumettre votre hôtel</a>
                 </div>
-            </ul>
-            <ul id="child3">
+            </div>
+            <div id="child3" class="foot">
                 <h4>Assistance</h4>
                 <div>
                     <a href="#">Centre d'aide</a>
                     <a href="#">Nous contacter</a>
                 </div>
-            </ul>
+            </div>
         </footer>
     </body>
 </html>
